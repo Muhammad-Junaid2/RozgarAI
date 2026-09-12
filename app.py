@@ -19,22 +19,6 @@ with st.sidebar:
     st.title("🧭 RozgarAI")
     st.caption("AI Career & Job Application Agent")
 
-    api_key_input = st.text_input(
-        "Gemini API Key",
-        type="password",
-        value=os.environ.get("GEMINI_API_KEY", ""),
-        help="Get a free key at https://aistudio.google.com/app/apikey. "
-        "Leave blank to run in demo/mock mode.",
-    )
-    if api_key_input:
-        os.environ["GEMINI_API_KEY"] = api_key_input
-
-    if MOCK_MODE and not api_key_input:
-        st.info("🧪 Running in **MOCK MODE** — no API key detected. "
-                 "Results below are canned demo data so you can try the app "
-                 "without spending API credits.")
-
-    st.divider()
     st.markdown(
         "**How it works**\n\n"
         "1. Upload your CV\n"
