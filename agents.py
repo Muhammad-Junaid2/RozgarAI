@@ -27,7 +27,7 @@ MOCK_MODE = os.environ.get("MOCK_MODE", "").lower() in ("1", "true", "yes") or n
     "GEMINI_API_KEY"
 )
 
-MODEL_NAME = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+MODEL_NAME = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash-lite")
 
 
 class AgentError(Exception):
